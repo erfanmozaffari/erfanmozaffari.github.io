@@ -102,7 +102,7 @@
         </svg>
         <svg class="fig-narrow" viewBox="0 0 360 512" role="img" aria-labelledby="fign-t fign-d">
             <title id="fign-t">Control traffic with and without R-TWT in an industrial cell</title>
-            <desc id="fign-d">A PLC controls a robot arm through a Wi-Fi 7 access point while a camera streams video. With R-TWT, control frames are sent inside a reserved service period and the video frame is deferred. Without R-TWT, a video frame occupies the channel and the control frames are delayed.</desc>
+            <desc id="fign-d">A PLC controls a robot arm through a Wi-Fi 7 access point while a camera streams video. With R-TWT, control frames are sent inside recurring reserved service periods and the video frame is deferred. Without R-TWT, a video frame occupies the channel and the control frames are delayed.</desc>
             <text class="cap" x="0" y="14">FACTORY CELL</text>
             <path class="link" d="M88 80C120 80 130 112 150 114M210 114C240 114 250 102 280 102"/>
             <path class="link-be" d="M276 162C250 162 235 135 210 122"/>
@@ -116,47 +116,62 @@
             <text x="297" y="192" text-anchor="middle">Camera</text>
 
             <text class="cap" x="0" y="222">AIRTIME</text>
-            <path class="guide" d="M56 254V484M352 254V484"/>
-
             <text class="grp" x="0" y="246">With R-TWT</text>
-            <text class="note" x="88" y="246">reserved service period</text>
-            <rect class="band" x="56" y="254" width="56" height="84" rx="4"/>
-            <text class="note" x="0" y="286">Control</text>
-            <text class="note" x="0" y="326">Video</text>
+            <text class="note" x="88" y="246">recurring service periods</text>
+            <rect class="band" x="56" y="254" width="44" height="84" rx="4"/>
+            <rect class="band" x="154" y="254" width="44" height="84" rx="4"/>
+            <rect class="band" x="252" y="254" width="44" height="84" rx="4"/>
+            <text class="note" x="0" y="286">Control</text><text class="note" x="0" y="326">Video</text>
             <path class="lane" d="M56 282H352M56 322H352"/>
-            <rect class="f-ctl" x="62" y="273" width="11" height="18" rx="2"/>
-            <rect class="f-ctl" x="79" y="273" width="11" height="18" rx="2"/>
-            <rect class="f-ctl" x="96" y="273" width="9" height="18" rx="2"/>
-            <rect class="f-ghost" x="62" y="313" width="40" height="18" rx="2"/>
-            <rect class="f-be" x="122" y="313" width="74" height="18" rx="2"/>
-            <rect class="f-be" x="204" y="313" width="58" height="18" rx="2"/>
-            <rect class="f-be" x="270" y="313" width="76" height="18" rx="2"/>
-            <text class="note" x="82" y="354" text-anchor="middle">deferred</text>
-
+            <rect class="f-ctl" x="61" y="273" width="9" height="18" rx="2"/>
+            <rect class="f-ctl" x="75" y="273" width="9" height="18" rx="2"/>
+            <rect class="f-ctl" x="89" y="273" width="7" height="18" rx="2"/>
+            <rect class="f-ctl" x="159" y="273" width="9" height="18" rx="2"/>
+            <rect class="f-ctl" x="173" y="273" width="9" height="18" rx="2"/>
+            <rect class="f-ctl" x="187" y="273" width="7" height="18" rx="2"/>
+            <rect class="f-ctl" x="257" y="273" width="9" height="18" rx="2"/>
+            <rect class="f-ctl" x="271" y="273" width="9" height="18" rx="2"/>
+            <rect class="f-ctl" x="285" y="273" width="7" height="18" rx="2"/>
+            <rect class="f-ghost" x="60" y="313" width="34" height="18" rx="2"/>
+            <rect class="f-be" x="106" y="313" width="42" height="18" rx="2"/>
+            <rect class="f-be" x="204" y="313" width="42" height="18" rx="2"/>
+            <rect class="f-be" x="302" y="313" width="44" height="18" rx="2"/>
+            <text class="note" x="77" y="354" text-anchor="middle">deferred</text>
             <text class="grp" x="0" y="384">Without R-TWT</text>
             <text class="note" x="106" y="384">video takes the channel first</text>
-            <text class="note" x="0" y="416">Control</text>
-            <text class="note" x="0" y="462">Video</text>
+            <text class="note" x="0" y="416">Control</text><text class="note" x="0" y="462">Video</text>
             <path class="lane" d="M56 412H352M56 458H352"/>
-            <rect class="f-ghost" x="62" y="403" width="11" height="18" rx="2"/>
-            <rect class="f-ghost" x="79" y="403" width="11" height="18" rx="2"/>
-            <rect class="f-ghost" x="96" y="403" width="9" height="18" rx="2"/>
-            <rect class="f-be" x="58" y="449" width="82" height="18" rx="2"/>
-            <rect class="f-be" x="206" y="449" width="62" height="18" rx="2"/>
-            <rect class="f-be" x="276" y="449" width="70" height="18" rx="2"/>
-            <rect class="f-late" x="148" y="403" width="11" height="18" rx="2"/>
-            <rect class="f-late" x="165" y="403" width="11" height="18" rx="2"/>
-            <rect class="f-late" x="182" y="403" width="9" height="18" rx="2"/>
-            <path class="delay" d="M62 432H148M62 428v8M148 428v8"/>
-            <text class="note" x="105" y="444" text-anchor="middle">delay</text>
-
-            <path class="axis" d="M56 488H352M56 482v12M352 482v12"/>
-            <text class="note" x="56" y="507" text-anchor="middle">beacon</text>
-            <text class="note" x="352" y="507" text-anchor="end">beacon</text>
+            <rect class="f-ghost" x="61" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-ghost" x="75" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-ghost" x="89" y="403" width="7" height="18" rx="2"/>
+            <rect class="f-ghost" x="159" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-ghost" x="173" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-ghost" x="187" y="403" width="7" height="18" rx="2"/>
+            <rect class="f-ghost" x="257" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-ghost" x="271" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-ghost" x="285" y="403" width="7" height="18" rx="2"/>
+            <rect class="f-be" x="58" y="449" width="50" height="18" rx="2"/>
+            <rect class="f-be" x="156" y="449" width="50" height="18" rx="2"/>
+            <rect class="f-be" x="254" y="449" width="50" height="18" rx="2"/>
+            <rect class="f-late" x="112" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-late" x="126" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-late" x="140" y="403" width="7" height="18" rx="2"/>
+            <rect class="f-late" x="210" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-late" x="224" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-late" x="238" y="403" width="7" height="18" rx="2"/>
+            <rect class="f-late" x="308" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-late" x="322" y="403" width="9" height="18" rx="2"/>
+            <rect class="f-late" x="336" y="403" width="7" height="18" rx="2"/>
+            <path class="delay" d="M61 432H112M61 428v8M112 428v8M159 432H210M159 428v8M210 428v8M257 432H308M257 428v8M308 428v8"/>
+            <text class="note" x="86" y="444" text-anchor="middle">delay</text>
+            <text class="note" x="184" y="444" text-anchor="middle">delay</text>
+            <text class="note" x="282" y="444" text-anchor="middle">delay</text>
+            <path class="axis" d="M56 488H346"/><path class="axis" d="M340 483l8 5-8 5"/>
+            <text class="note" x="352" y="507" text-anchor="end">time</text>
           </svg>
           <svg class="fig-wide" viewBox="0 0 640 532" role="img" aria-labelledby="fig-t fig-d">
             <title id="fig-t">Control traffic with and without R-TWT in an industrial cell</title>
-            <desc id="fig-d">A PLC controls a robot arm through a Wi-Fi 7 access point while a camera streams video. With R-TWT, control frames are sent inside reserved service periods and the video frame is deferred. Without R-TWT, a video frame occupies the channel and the control frames are delayed.</desc>
+            <desc id="fig-d">A PLC controls a robot arm through a Wi-Fi 7 access point while a camera streams video. With R-TWT, control frames are sent inside recurring reserved service periods and the video frame is deferred. Without R-TWT, a video frame occupies the channel and the control frames are delayed.</desc>
 
             <text class="cap" x="0" y="14">FACTORY CELL</text>
 
@@ -202,65 +217,69 @@
 
             <!-- airtime -->
             <text class="cap" x="0" y="212">AIRTIME</text>
-            <path class="guide" d="M80 252V506M355 252V506M630 252V506"/>
-
-            <!-- with R-TWT -->
             <text class="grp" x="0" y="244">With R-TWT</text>
-            <text class="note" x="90" y="244">reserved service period protects control traffic</text>
+            <text class="note" x="90" y="244">recurring service periods protect control traffic</text>
             <rect class="band" x="80" y="252" width="70" height="92" rx="4"/>
-            <rect class="band" x="355" y="252" width="70" height="92" rx="4"/>
-            <text class="note" x="0" y="277">Control</text>
-            <text class="note" x="0" y="323">Video</text>
+            <rect class="band" x="263" y="252" width="70" height="92" rx="4"/>
+            <rect class="band" x="447" y="252" width="70" height="92" rx="4"/>
+            <text class="note" x="0" y="277">Control</text><text class="note" x="0" y="323">Video</text>
             <path class="lane" d="M80 282H630M80 328H630"/>
             <rect class="f-ctl" x="88" y="268" width="14" height="20" rx="2"/>
             <rect class="f-ctl" x="112" y="268" width="14" height="20" rx="2"/>
             <rect class="f-ctl" x="136" y="268" width="10" height="20" rx="2"/>
-            <rect class="f-ctl" x="363" y="268" width="14" height="20" rx="2"/>
-            <rect class="f-ctl" x="387" y="268" width="14" height="20" rx="2"/>
-            <rect class="f-ctl" x="411" y="268" width="10" height="20" rx="2"/>
+            <rect class="f-ctl" x="271" y="268" width="14" height="20" rx="2"/>
+            <rect class="f-ctl" x="295" y="268" width="14" height="20" rx="2"/>
+            <rect class="f-ctl" x="319" y="268" width="10" height="20" rx="2"/>
+            <rect class="f-ctl" x="455" y="268" width="14" height="20" rx="2"/>
+            <rect class="f-ctl" x="479" y="268" width="14" height="20" rx="2"/>
+            <rect class="f-ctl" x="503" y="268" width="10" height="20" rx="2"/>
             <rect class="f-ghost" x="94" y="314" width="42" height="20" rx="2"/>
-            <rect class="f-be" x="158" y="314" width="80" height="20" rx="2"/>
-            <rect class="f-be" x="246" y="314" width="64" height="20" rx="2"/>
-            <rect class="f-be" x="433" y="314" width="96" height="20" rx="2"/>
-            <rect class="f-be" x="537" y="314" width="64" height="20" rx="2"/>
+            <rect class="f-be" x="158" y="314" width="40" height="20" rx="2"/>
+            <rect class="f-be" x="206" y="314" width="44" height="20" rx="2"/>
+            <rect class="f-be" x="341" y="314" width="40" height="20" rx="2"/>
+            <rect class="f-be" x="389" y="314" width="48" height="20" rx="2"/>
+            <rect class="f-be" x="525" y="314" width="40" height="20" rx="2"/>
+            <rect class="f-be" x="573" y="314" width="42" height="20" rx="2"/>
             <text class="note" x="115" y="358" text-anchor="middle">deferred</text>
-
-            <!-- without R-TWT -->
             <text class="grp" x="0" y="392">Without R-TWT</text>
             <text class="note" x="108" y="392">video frames take the channel first</text>
-            <text class="note" x="0" y="437">Control</text>
-            <text class="note" x="0" y="483">Video</text>
+            <text class="note" x="0" y="437">Control</text><text class="note" x="0" y="483">Video</text>
             <path class="lane" d="M80 442H630M80 488H630"/>
             <rect class="f-ghost" x="88" y="428" width="14" height="20" rx="2"/>
             <rect class="f-ghost" x="112" y="428" width="14" height="20" rx="2"/>
             <rect class="f-ghost" x="136" y="428" width="10" height="20" rx="2"/>
-            <rect class="f-ghost" x="363" y="428" width="14" height="20" rx="2"/>
-            <rect class="f-ghost" x="387" y="428" width="14" height="20" rx="2"/>
-            <rect class="f-ghost" x="411" y="428" width="10" height="20" rx="2"/>
+            <rect class="f-ghost" x="271" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-ghost" x="295" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-ghost" x="319" y="428" width="10" height="20" rx="2"/>
+            <rect class="f-ghost" x="455" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-ghost" x="479" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-ghost" x="503" y="428" width="10" height="20" rx="2"/>
             <rect class="f-be" x="84" y="474" width="90" height="20" rx="2"/>
-            <rect class="f-be" x="252" y="474" width="80" height="20" rx="2"/>
-            <rect class="f-be" x="340" y="474" width="92" height="20" rx="2"/>
-            <rect class="f-be" x="506" y="474" width="84" height="20" rx="2"/>
+            <rect class="f-be" x="267" y="474" width="90" height="20" rx="2"/>
+            <rect class="f-be" x="451" y="474" width="90" height="20" rx="2"/>
+            <rect class="f-be" x="240" y="474" width="22" height="20" rx="2"/>
+            <rect class="f-be" x="423" y="474" width="22" height="20" rx="2"/>
             <rect class="f-late" x="182" y="428" width="14" height="20" rx="2"/>
-            <rect class="f-late" x="204" y="428" width="14" height="20" rx="2"/>
-            <rect class="f-late" x="226" y="428" width="10" height="20" rx="2"/>
-            <rect class="f-late" x="440" y="428" width="14" height="20" rx="2"/>
-            <rect class="f-late" x="462" y="428" width="14" height="20" rx="2"/>
-            <rect class="f-late" x="484" y="428" width="10" height="20" rx="2"/>
-            <path class="delay" d="M88 456H182M88 452v8M182 452v8M363 456H440M363 452v8M440 452v8"/>
+            <rect class="f-late" x="206" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-late" x="230" y="428" width="10" height="20" rx="2"/>
+            <rect class="f-late" x="365" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-late" x="389" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-late" x="413" y="428" width="10" height="20" rx="2"/>
+            <rect class="f-late" x="549" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-late" x="573" y="428" width="14" height="20" rx="2"/>
+            <rect class="f-late" x="597" y="428" width="10" height="20" rx="2"/>
+            <path class="delay" d="M88 456H182M88 452v8M182 452v8M271 456H365M271 452v8M365 452v8M455 456H549M455 452v8M549 452v8"/>
             <text class="note" x="135" y="470" text-anchor="middle">delay</text>
-            <text class="note" x="401" y="470" text-anchor="middle">delay</text>
-
-            <path class="axis" d="M80 508H630M80 502v12M355 502v12M630 502v12"/>
-            <text class="note" x="80" y="527" text-anchor="middle">beacon</text>
-            <text class="note" x="355" y="527" text-anchor="middle">beacon</text>
-            <text class="note" x="640" y="527" text-anchor="end">beacon</text>
+            <text class="note" x="318" y="470" text-anchor="middle">delay</text>
+            <text class="note" x="502" y="470" text-anchor="middle">delay</text>
+            <path class="axis" d="M80 508H624"/><path class="axis" d="M618 503l8 5-8 5"/>
+            <text class="note" x="630" y="527" text-anchor="end">time</text>
           </svg>
           <figcaption>
-            A PLC drives a robot arm over Wi-Fi 7 while a camera streams video. With R-TWT, control
-            frames get a reserved service period in every beacon interval and competing traffic is
-            held back. Without it, video frames can occupy the channel and the control frames
-            arrive late.
+            A PLC drives a robot arm over Wi-Fi 7 while a camera streams video. With R-TWT,
+            control frames get recurring reserved service periods and competing traffic is held
+            back during them. Without it, video frames can occupy the channel and the control
+            frames arrive late.
           </figcaption>
         </figure>
         <p>
@@ -475,7 +494,7 @@
       <div class="content">
         <p>
           The best way to reach me is by email:
-          <a href="mailto:erfanmozaffari@yahoo.com">erfanmozaffari@yahoo.com</a>.
+          <a class="mail" data-u="erfanmozaffari" data-d="yahoo" data-t="com">erfanmozaffari [at] yahoo [dot] com</a>.
         </p>
         <p class="meta">Tübingen, Germany · work permit for Germany</p>
       </div>
@@ -487,6 +506,15 @@
 <footer>
   <div class="wrap">© 2026 Erfan Mozaffariahrar</div>
 </footer>
+
+<script>
+  // Assemble the email address in the browser so it never appears in the page source.
+  document.querySelectorAll('a.mail').forEach(function (a) {
+    var addr = a.dataset.u + '@' + a.dataset.d + '.' + a.dataset.t;
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+  });
+</script>
 
 </body>
 </html>
