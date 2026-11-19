@@ -181,3 +181,5 @@ footer { border-top: 1px solid var(--rule); padding: 2rem 0 3rem; font-size: .84
   .fig .note { font-size: 11.5px; }
 }
 .pub .doi { font-size: .78rem; margin-left: .3rem; }
+
+.entry .links { margin-top: .6rem; font-size: .88rem; }
